@@ -4,6 +4,5 @@ from . import models
 
 
 # Register your models here.
-admin.site.register(models.Brand)
 admin.site.register(models.Taxonomy)
 admin.site.register(models.Taxon)
