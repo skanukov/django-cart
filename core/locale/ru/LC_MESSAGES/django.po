@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-04 11:05+0000\n"
+"POT-Creation-Date: 2016-11-04 11:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,11 +24,11 @@ msgstr ""
 msgid "name"
 msgstr ""
 
-#: core/models.py:8 core/models.py:26
+#: core/models.py:8 core/models.py:28
 msgid "position"
 msgstr "позиция"
 
-#: core/models.py:17
+#: core/models.py:17 core/models.py:36
 msgid "taxonomy"
 msgstr "таксономия"
 
@@ -36,10 +36,22 @@ msgstr "таксономия"
 msgid "taxonomies"
 msgstr "таксономии"
 
-#: core/models.py:42
+#: core/models.py:24
+msgid "description"
+msgstr "описание"
+
+#: core/models.py:27
+msgid "permalink"
+msgstr "URL-адрес"
+
+#: core/models.py:34
+msgid "parent"
+msgstr "родитель"
+
+#: core/models.py:45
 msgid "taxon"
 msgstr "таксон"
 
-#: core/models.py:43
+#: core/models.py:46
 msgid "taxons"
 msgstr "таксоны"
