@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-04 10:49+0000\n"
+"POT-Creation-Date: 2016-11-04 11:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,18 +20,26 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
+#: core/models.py:7 core/models.py:22
+msgid "name"
+msgstr ""
+
+#: core/models.py:8 core/models.py:26
+msgid "position"
+msgstr "позиция"
+
 #: core/models.py:17
-msgid "Taxonomy"
-msgstr "Таксономия"
+msgid "taxonomy"
+msgstr "таксономия"
 
 #: core/models.py:18
-msgid "Taxonomies"
-msgstr "Таксономии"
+msgid "taxonomies"
+msgstr "таксономии"
 
 #: core/models.py:42
-msgid "Taxon"
-msgstr "Таксон"
+msgid "taxon"
+msgstr "таксон"
 
 #: core/models.py:43
-msgid "Taxons"
-msgstr "Таксоны"
+msgid "taxons"
+msgstr "таксоны"

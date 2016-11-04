@@ -4,8 +4,8 @@ from django.utils.translation import ugettext_lazy as _
 
 # Create your models here.
 class Taxonomy(models.Model):
-    name = models.CharField(max_length=200)
-    position = models.IntegerField(default=0)
+    name = models.CharField(max_length=200, verbose_name=_('name'))
+    position = models.IntegerField(default=0, verbose_name=_('position'))
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -14,16 +14,16 @@ class Taxonomy(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = _('Taxonomy')
-        verbose_name_plural = _('Taxonomies')
+        verbose_name = _('taxonomy')
+        verbose_name_plural = _('taxonomies')
 
 
 class Taxon(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, verbose_name=_('name'))
     description = models.TextField(null=True, blank=True)
     image = models.CharField(max_length=200, null=True, blank=True)
     permalink = models.URLField(max_length=200, null=True, blank=True)
-    position = models.IntegerField(default=0)
+    position = models.IntegerField(default=0, verbose_name=_('position'))
     meta_title = models.CharField(max_length=500, null=True, blank=True)
     meta_keywords = models.CharField(max_length=500, null=True, blank=True)
     meta_description = models.CharField(max_length=500, null=True, blank=True)
@@ -39,5 +39,5 @@ class Taxon(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = _('Taxon')
-        verbose_name_plural = _('Taxons')
+        verbose_name = _('taxon')
+        verbose_name_plural = _('taxons')
