@@ -3,6 +3,9 @@ from django.db import models
 
 # Create your models here.
 class Taxonomy(models.Model):
+    class Meta:
+        verbose_name_plural = 'Taxonomies'
+
     name = models.CharField(max_length=200)
     position = models.IntegerField(default=0)
 
