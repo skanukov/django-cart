@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models import signals
+from django.dispatch import receiver
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -44,3 +46,13 @@ class Taxon(models.Model):
     class Meta:
         verbose_name = _('taxon')
         verbose_name_plural = _('taxons')
+
+
+@receiver(signals.post_save, sender=Taxonomy)
+@receiver(signals.post_save, sender=Taxon)
+def taxonomy_post_create(sender, instance, created, **kwargs):
+    # Set taxonomy position to it's id after creation.
+    if created:
+        id = instance.pk
+        instance.position = id
+        instance.save()
