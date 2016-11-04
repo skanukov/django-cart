@@ -1,3 +1,3 @@
-(function() {
-    console.log('Taxonomy index');
+(function () {
+  console.log('Taxonomy script');
 })();

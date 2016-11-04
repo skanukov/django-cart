@@ -23,7 +23,7 @@ class Taxonomy(models.Model):
 class Taxon(models.Model):
     name = models.CharField(max_length=200, verbose_name=_('name'))
     description = models.TextField(null=True, blank=True,
-                                              verbose_name=_('description'))
+                                   verbose_name=_('description'))
     image = models.CharField(max_length=200, null=True, blank=True)
     permalink = models.URLField(max_length=200, null=True, blank=True,
                                 verbose_name=_('permalink'))
@@ -33,9 +33,9 @@ class Taxon(models.Model):
     meta_description = models.CharField(max_length=500, null=True, blank=True)
 
     parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True,
-                                       blank=True, verbose_name=_('parent'))
+                               blank=True, verbose_name=_('parent'))
     taxonomy = models.ForeignKey(Taxonomy, on_delete=models.CASCADE,
-                                           verbose_name=_('taxonomy')) 
+                                 verbose_name=_('taxonomy'))
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

@@ -91,3 +91,6 @@ ENV/
 
 # Ignore sqlite db
 *.sqlite3
+
+# IDE stuff
+.idea/
