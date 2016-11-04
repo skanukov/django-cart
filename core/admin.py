@@ -4,5 +4,12 @@ from . import models
 
 
 # Register your models here.
-admin.site.register(models.Taxonomy)
-admin.site.register(models.Taxon)
+@admin.register(models.Taxonomy)
+class TaxonomyAdmin(admin.ModelAdmin):
+    class Media:
+        js = ("taxonomy-index.js",)
+
+
+@admin.register(models.Taxon)
+class TaxonomyAdmin(admin.ModelAdmin):
+    pass
