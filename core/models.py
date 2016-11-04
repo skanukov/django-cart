@@ -1,11 +1,9 @@
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 
 
 # Create your models here.
 class Taxonomy(models.Model):
-    class Meta:
-        verbose_name_plural = 'Taxonomies'
-
     name = models.CharField(max_length=200)
     position = models.IntegerField(default=0)
 
@@ -14,6 +12,10 @@ class Taxonomy(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = _('Taxonomy')
+        verbose_name_plural = _('Taxonomies')
 
 
 class Taxon(models.Model):
@@ -35,3 +37,7 @@ class Taxon(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = _('Taxon')
+        verbose_name_plural = _('Taxons')
