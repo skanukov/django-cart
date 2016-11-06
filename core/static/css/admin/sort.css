@@ -1,8 +1,16 @@
-.column-drag_handle {
+#result_list .column-drag_handle {
   width: 2rem;
 }
 
-.field-drag_handle {
+#result_list .column-position {
+  display: none;
+}
+
+#result_list .field-drag_handle {
   color: #5F9EDF;
   cursor: move;
+}
+
+#result_list .field-position {
+  display: none;
 }

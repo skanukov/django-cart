@@ -7,7 +7,7 @@ from . import models
 # Register your models here.
 @admin.register(models.Taxonomy)
 class TaxonomyAdmin(admin.ModelAdmin):
-    list_display = ('drag_handle', 'name', 'visible',)
+    list_display = ('drag_handle', 'position', 'name', 'visible',)
     list_display_links = ('name',)
     ordering = ('-position',)
 

@@ -8,8 +8,11 @@
     // Add data-id to sortable items from action's select boxes.
     var $resultRows = $resultList.find('> tbody > tr');
     $resultRows.each(function (index) {
-      var modelId = jQuery(this).find('> .action-checkbox > .action-select').val();
-      jQuery(this).attr('data-id', modelId);
+      var modelId = jQuery(this).find('> .action-checkbox > .action-select').val(),
+        modelPosition = jQuery(this).find('> .field-position').html();
+
+      jQuery(this).attr('data-id',
+        '{id:' + modelId + ', position:' + modelPosition + '}');
     });
 
     // Make results table sortable.
