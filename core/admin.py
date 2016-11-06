@@ -7,7 +7,7 @@ from . import models
 @admin.register(models.Taxonomy)
 class TaxonomyAdmin(admin.ModelAdmin):
     class Media:
-        js = ("taxonomy-index.js",)
+        js = ('admin/Sortable.min.js', 'admin/taxonomy.js',)
 
 
 @admin.register(models.Taxon)
