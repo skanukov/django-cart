@@ -16,9 +16,9 @@ class TaxonomyAdmin(admin.ModelAdmin):
 
     class Media:
         css = {
-            'all': ('css/admin/taxonomy.css',)
+            'all': ('css/admin/sort.css',)
         }
-        js = ('js/admin/Sortable.min.js', 'js/admin/taxonomy.js',)
+        js = ('js/admin/Sortable.min.js', 'js/admin/sort.js',)
 
 
 @admin.register(models.Taxon)

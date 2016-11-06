@@ -8,7 +8,10 @@
     if ($resultBody.length > 0) {
       var sort = Sortable.create($resultBody.get(0), {
         animation: 150,
-        handle: ".field-drag_handle"
+        handle: '.field-drag_handle',
+        onUpdate: function (event) {
+          console.log(sort.toArray());
+        }
       });
     }
   });
