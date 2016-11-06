@@ -7,8 +7,8 @@
     var $resultBody = jQuery('#result_list').find('> tbody');
     if ($resultBody.length > 0) {
       var sort = Sortable.create($resultBody.get(0), {
-        animation: 150
-        // handle: ".tile__title"
+        animation: 150,
+        handle: ".field-drag_handle"
       });
     }
   });

@@ -1,0 +1,8 @@
+.column-drag_handle {
+  width: 2rem;
+}
+
+.field-drag_handle {
+  color: #5F9EDF;
+  cursor: move;
+}
