@@ -12,7 +12,7 @@
         modelPosition = jQuery(this).find('> .field-position').html();
 
       jQuery(this).attr('data-id',
-        '{id:' + modelId + ', position:' + modelPosition + '}');
+        '{"id":' + modelId + ', "position":' + modelPosition + '}');
     });
 
     // Make results table sortable.
@@ -22,7 +22,14 @@
         animation: 150,
         handle: '.field-drag_handle',
         onUpdate: function (event) {
-          console.log(sort.toArray());
+          jQuery.ajax({
+            url: 'reorder/',
+            data: JSON.stringify(sort.toArray()),
+            type: 'PUT',
+            success: function(data) {
+              console.log(data);
+            }
+          });
         }
       });
     }
