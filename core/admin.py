@@ -23,5 +23,5 @@ class TaxonomyAdmin(admin.ModelAdmin):
 
 
 @admin.register(models.Taxon)
-class TaxonomyAdmin(admin.ModelAdmin):
+class TaxonAdmin(admin.ModelAdmin):
     pass
