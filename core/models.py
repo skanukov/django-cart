@@ -50,10 +50,10 @@ class Taxon(models.Model):
         verbose_name_plural = _('taxons')
 
 
+# Set sortable position to it's id after creation.
 @dispatch.receiver(signals.post_save, sender=Taxonomy)
 @dispatch.receiver(signals.post_save, sender=Taxon)
 def sortable_post_create(sender, instance, created, **kwargs):
-    # Set sortable position to it's id after creation.
     if created:
         id = instance.pk
         instance.position = id

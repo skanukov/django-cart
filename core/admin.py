@@ -21,7 +21,7 @@ class TaxonomyAdmin(admin.ModelAdmin):
         existing_urls = super(TaxonomyAdmin, self).get_urls()
         my_urls = [
             urls.url(r'^reorder/$',
-                self.admin_site.admin_view(self.reorder))
+                     self.admin_site.admin_view(self.reorder))
         ]
         return my_urls + existing_urls
 
@@ -32,7 +32,8 @@ class TaxonomyAdmin(admin.ModelAdmin):
         css = {
             'all': ('css/admin/sort.css',)
         }
-        js = ('js/admin/Sortable.min.js', 'js/admin/sort.js',)
+        js = ('js/admin/csrfajax.js', 'js/admin/Sortable.min.js',
+              'js/admin/sort.js',)
 
 
 @admin.register(models.Taxon)
